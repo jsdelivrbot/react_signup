@@ -1,9 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-<<<<<<< HEAD
-=======
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
->>>>>>> origin/master
 
 const ROOT_URL = 'http://localhost:3090';
 
@@ -11,13 +8,6 @@ export function signinUser({ email, password }) {
   return function(dispatch) {
     axios.post(`${ROOT_URL}/signin`, { email, password })
       .then((response) => {
-<<<<<<< HEAD
-
-        browserHistory.push('/feature');
-
-      })
-      .catch()
-=======
         dispatch({ type: AUTH_USER });
         localStorage.setItem('token', response.data.token);
         browserHistory.push('/feature');

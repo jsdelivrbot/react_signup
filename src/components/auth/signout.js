@@ -15,10 +15,4 @@ class Signout extends Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//
-//   };
-// }
-
 export default connect(null, actions)(Signout);
